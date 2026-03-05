@@ -283,41 +283,16 @@ cd frontend && npm run dev   # :5173
 
 ### Backend → Render
 
-1. [render.com](https://render.com) → New Web Service → connect this repo
-2. Root Directory: `backend` · Build: `npm install` · Start: `npm start`
-3. Add all `backend/.env` variables in Render's Environment tab
-4. Set `NODE_ENV=production`
-5. Deploy — note your URL: `https://cinetrac-atl-xxxx.onrender.com`
+1. [render.com](https://cinetrac-atl.onrender.com) → New Web Service → connect this repo
+
 
 ### Frontend → Vercel
 
-1. [vercel.com](https://vercel.com) → New Project → import this repo
-2. Root Directory: `frontend`
-3. Add environment variables — set `VITE_API_URL=https://cinetrac-atl-xxxx.onrender.com/api`
-4. Deploy — note your URL: `https://cinetrac-atl.vercel.app`
+1. [vercel.com](https://cine-trac-atl.vercel.app/) → New Project → import this repo
 
-### Post-Deploy
 
-Update `CLIENT_URL` in Render to your Vercel URL to fix CORS:
-```
-CLIENT_URL = https://cinetrac-atl.vercel.app
-```
 
-### Production Checklist
-- [ ] `NODE_ENV=production` on Render
-- [ ] `CLIENT_URL` matches Vercel domain exactly
-- [ ] Google Maps API key restricted to production domain
-- [ ] MongoDB Atlas Network Access allows Render's IP (or `0.0.0.0/0`)
-- [ ] JWT_SECRET is unique and never reused from dev
 
----
-
-## Seed Data
-
-`npm run seed` loads:
-
-| Collection | Count | Details |
-|---|---|---|
 | Studios | 6 | Tyler Perry, Trilith, Assembly, EUE/Screen Gems, Atlanta Metro, Third Rail |
 | Productions | 12 | 6 TV series + 6 films with full Emmy/Oscar award arrays |
 | Jobs | 8 | Open calls, acting, crew, writing, VFX, union, internship |
