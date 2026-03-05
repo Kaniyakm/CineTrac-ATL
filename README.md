@@ -1,6 +1,4 @@
-# CineTrack ATL v2.0 🎬
-
-# CineTrac ATL
+# CineTrack ATL  🎬
 
 A full-stack film industry platform for the Atlanta market. Combines TMDB movie discovery with a proprietary database of Emmy and Oscar-nominated Atlanta productions, an interactive studio directory, and a job board for open calls and industry positions.
 
